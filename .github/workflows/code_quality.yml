@@ -16,6 +16,9 @@ jobs:
           fetch-depth: 0
       - name: "Qodana Scan"
         uses: JetBrains/qodana-action@v2022.3.2
-      - uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
+      # - uses: github/codeql-action/upload-sarif@v2
+      #   with:
+      #     sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
+      #
+      #   https://dev.to/callmekatootie/debug-resource-not-accessible-by-integration-error-when-working-with-githubs-graphql-endpoint-5bim
+      #   https://docs.github.com/en/apps/maintaining-github-apps/installing-github-apps
