@@ -1,4 +1,4 @@
-name: Qodana
+name: Github Action
 on:
   workflow_dispatch:
   pull_request:
@@ -20,6 +20,17 @@ jobs:
         uses: JetBrains/qodana-action@v2022.3.2
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
+
+  task-list-checker:
+    runs-on: ubuntu-latest
+    if: ${{ always() && contains(join(needs.*.result, ','), 'success') }}
+    needs: [Qodana]
+    steps:
+      - name: Check for incomplete task list items
+        uses: Shopify/task-list-checker@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
       # - uses: github/codeql-action/upload-sarif@v2
       #   with:
       #     sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
