@@ -26,7 +26,7 @@ public class CustomerController {
     }
    
 
-    @GetMapping("/customers/{id}")
+    @GetMapping("/customer/{id}")
     public String getCustomerById(@PathVariable("id") String id) {
         RestTemplate restTemplate = new RestTemplate();
         String mockApiUrl = "https://648eff0475a96b66444490b8.mockapi.io/api/v1/customers/" + id;
@@ -36,7 +36,7 @@ public class CustomerController {
         return customer;
     }
     
-    @GetMapping("/customers/{id}/orders")
+    @GetMapping("/customer/{id}/orders")
     public String getOrdersWithCustomerById(@PathVariable("id") String id) {
         RestTemplate restTemplate = new RestTemplate();
         String mockApiUrl = "https://648eff0475a96b66444490b8.mockapi.io/api/v1/customers/" + id + "/orders";
@@ -46,7 +46,7 @@ public class CustomerController {
         return orders;
     }
     
-    @GetMapping("/customers/{customerId}/orders/{orderId}")
+    @GetMapping("/customer/{customerId}/order/{orderId}")
     public String getOrderById(@PathVariable("customerId") String customerId, @PathVariable("orderId") String orderId) {
         RestTemplate restTemplate = new RestTemplate();
         String mockApiUrl = "https://648eff0475a96b66444490b8.mockapi.io/api/v1/customers/" + customerId + "/orders/" + orderId;
@@ -56,7 +56,7 @@ public class CustomerController {
         return order;
     }
     
-    @GetMapping("/customers/{customerId}/orders/{orderId}/products")
+    @GetMapping("/customer/{customerId}/order/{orderId}/products")
     public String getProductByOrder(@PathVariable("customerId") String customerId, @PathVariable("orderId") String orderId) {
         RestTemplate restTemplate = new RestTemplate();
         String mockApiUrl = "https://648eff0475a96b66444490b8.mockapi.io/api/v1/customers/" + customerId + "/orders/" + orderId + "/products";

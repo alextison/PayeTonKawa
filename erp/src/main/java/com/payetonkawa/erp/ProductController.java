@@ -25,7 +25,7 @@ public class ProductController {
     }
    
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/product/{id}")
     public String getProductById(@PathVariable("id") String id) {
         RestTemplate restTemplate = new RestTemplate();
         String mockApiUrl = "https://648eff0475a96b66444490b8.mockapi.io/api/v1/products/" + id;
