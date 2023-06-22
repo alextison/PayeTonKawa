@@ -11,6 +11,7 @@ Applicative solution design and development - EPSI I1 MSPR
   - [General Information](#general-information)
   - [Technologies Used](#technologies-used)
   - [Features](#features)
+    - [API Routes for:](#api-routes-for)
   - [Screenshots](#screenshots)
   - [Setup](#setup)
   - [Usage](#usage)
@@ -28,15 +29,20 @@ Applicative solution design and development - EPSI I1 MSPR
 
 ## Technologies Used
 
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Java/SpringBoot
+- Flutter/Dart
 
 ## Features
 
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+### API Routes for:
+
+- Products
+- Product by id
+- Customers
+- Customer by id
+- Customer by id orders
+- Customer by id order by id
+- Customer by id order by id products
 
 ## Screenshots
 
@@ -56,8 +62,10 @@ Project is: _in progress_.
 
 Room for improvement:
 
-- Improvement to be done 1
-- Improvement to be done 2
+- Use JWT for authentication
+- Analyse the code and improve it
+- Use VR to visualize the products
+- Send QR code by mail
 
 To do:
 
